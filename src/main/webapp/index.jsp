@@ -29,11 +29,11 @@
         
         <div class="botonoes-container"
             
-            <form action="" method="GET">
-                <a href=""><button>mostrar usuarios</button></a>
-                <a href=""><button>guardar usuarios</button></a>
-                <a href=""><button>modificar usuarios</button></a>
-
+            <form action="servletCliente" method="GET">
+                <a href="servletCliente?action=mostrar"><button>mostrar usuarios</button></a>
+                <a href="servletCliente?action=guardar"><button>guardar usuarios</button></a>
+                <a href="servletCliente?action=modificar"><button>modificar usuarios</button></a>
+                <a href="servletCliente?action=eliminar"><button>eliminar usuarios</button></a>
             </form>
             
  
