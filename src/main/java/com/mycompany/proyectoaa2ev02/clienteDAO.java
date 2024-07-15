@@ -28,9 +28,8 @@ public class clienteDAO {
     
         try {
             conn = conexionDAO.obtenerConexion();
-            String sql=" insert into cliente values (" + cedula+ ", '" + nombre+"', '"+apellido+"', '"+edad+ ", '"
-                    + correo+"', '" + clave+"', '"+ telefono+"' );"
-                    ;
+            String sql=" insert into cliente values (" + cedula+ ", '" + nombre+"', '"+apellido+"', "+edad+ ", '"
+                    + correo+"', '" + clave+"', '"+ telefono+"' );";
             stmt = conn.prepareStatement(sql);
             
          
@@ -122,7 +121,7 @@ public class clienteDAO {
     
         try {
             conn = conexionDAO.obtenerConexion();
-            String sql=" update cliente set nombre = '" + nombre+"', '"+apellido+"', '"+edad+ ", '"
+            String sql=" update cliente set nombre = '" + nombre+"', '"+apellido+"', "+edad+ ", '"
                     + correo+"', '" + clave+"', '"+ telefono+"'  where cedula="+cedula+";";
             stmt = conn.prepareStatement(sql);
              stmt.executeUpdate();

@@ -32,7 +32,8 @@ public class servletCliente extends HttpServlet {
         }
         else if("guardar".equals(action)){mostrarClientesGuardar(request, response);}
         else if("modificar".equals(action)){mostrarClientesModificar(request, response);}
-         else if("eliminar".equals(action)){mostrarClientesEliminar(request, response);}
+        else if("eliminar".equals(action)){mostrarClientesModificar(request, response);}
+        
     }
 
  //enviar
@@ -90,7 +91,7 @@ public class servletCliente extends HttpServlet {
     {
     clienteDAO clienteDAO = new clienteDAO();
     List<entidadCliente> clientes = clienteDAO.obtenerClientes();
-    request.setAttribute("listaClientes", clientes);
+    request.setAttribute("listaclientes", clientes);
     request.getRequestDispatcher("guardarClientes.jsp").forward(request, response);
     
     }
