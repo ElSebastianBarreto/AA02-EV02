@@ -18,6 +18,11 @@
             <tr>
                 <th>ID</th>
                  <th>Nombre</th>
+                  <th>Apellido</th>
+                   <th>Edad</th>
+                    <th>Correo</th>
+                     <th>Clave</th>
+                      <th>Telefono</th>
                 
             </tr>
             <% 
@@ -29,6 +34,11 @@
             <tr>
                 <td><%= cliente.getCedula() %></td>
                 <td><%= cliente.getNombre()%></td>
+                <td><%= cliente.getApellido()%></td>
+                <td><%= cliente.getEdad()%></td>
+                <td><%= cliente.getCorreo()%></td>
+                <td><%= cliente.getClave()%></td>
+                <td><%= cliente.getTelefono()%></td>
             </tr>
             <%
                 }

@@ -33,7 +33,7 @@
                 <a href="servletCliente?action=mostrar"><button>mostrar usuarios</button></a>
                <a href="servletCliente?action=guardar"><button>guardar usuarios</button></a>
                 <a href="servletCliente?action=modificar"><button>modificar usuarios</button></a>
-                <a href="servletCliente?action=eliminar"><button>eliminar usuarios</button></a>
+                
             </form>
             
  

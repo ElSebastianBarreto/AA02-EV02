@@ -121,8 +121,8 @@ public class clienteDAO {
     
         try {
             conn = conexionDAO.obtenerConexion();
-            String sql=" update cliente set nombre = '" + nombre+"', '"+apellido+"', "+edad+ ", '"
-                    + correo+"', '" + clave+"', '"+ telefono+"'  where cedula="+cedula+";";
+            String sql=" update cliente set nombre = '" + nombre+"', apellido = '"+apellido+"', edad= "+edad+ ", correo= '"
+                    + correo+"', clave= '" + clave+"', telefono = '"+ telefono+"'  where cedula="+cedula+";";
             stmt = conn.prepareStatement(sql);
              stmt.executeUpdate();
         } catch (Exception e) {
@@ -146,7 +146,7 @@ public class clienteDAO {
      
      
      
-         public void eliminarClientes(int cedula){
+         public void eliminarCliente(int cedula){
     
     Connection conn = null;
     
@@ -155,7 +155,7 @@ public class clienteDAO {
     
         try {
             conn = conexionDAO.obtenerConexion();
-            String sql=" delete from cliente  where cedula="+cedula+";";
+            String sql="delete from cliente where cedula="+cedula+";";
             stmt = conn.prepareStatement(sql);
        
              stmt.executeUpdate();

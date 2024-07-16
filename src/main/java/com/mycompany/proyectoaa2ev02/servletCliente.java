@@ -128,30 +128,19 @@ public class servletCliente extends HttpServlet {
     }
     
     
-        public void mostrarClientesEliminar(HttpServletRequest request, HttpServletResponse response)
-    throws ServletException, IOException
-    {
-    clienteDAO clienteDAO = new clienteDAO();
-    List<entidadCliente> clientes = clienteDAO.obtenerClientes();
-    request.setAttribute("listaclientes", clientes);
-    request.getRequestDispatcher("eliminarCLientes.jsp").forward(request, response);
-    
-    }
-    
-    
-        
     public void eliminarClientes(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException
     {
     
-    int id = Integer.parseInt(request.getParameter("cedula"));
+    int id = Integer.parseInt(request.getParameter("id"));
    
     
     
     clienteDAO clienteDAO = new clienteDAO();
-    clienteDAO.eliminarClientes(id);
-    //nos actualiza
-        mostrarClientesEliminar(request, response);
+    clienteDAO.eliminarCliente(id);
+ 
+        //nos actualiza
+        mostrarClientesModificar(request, response);
     
     }
        
